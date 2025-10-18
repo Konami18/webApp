@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ: khám bệnh vô năng</title>
+    <link rel ='stylesheet' href="css.css">
+    <link rel ='stylesheet' href="reset.css">
+</head>
+<body>
+    <div id="fake-header"></div>
+    <header>
+        <script src="js.js"></script>
+        <a href="../Trang chu/index.html"><img id="logo" src="../Images/pnk1.jpg" alt="logo"></a>
+        <ul class="menu">
+            <li><a href="#">
+                <p><b>VIETNAMESE</b></p>
+                <ion-icon name="globe-outline"></ion-icon>
+                <ul class="language">
+                    <li><a href=".">
+                        <p>Vietnamese</p>
+                    </a></li>
+
+                    <li><a href="#">
+                        <p>English</p>
+                        <span>Không hỗ trợ ngôn ngữ này</span>
+                    </a></li>
+                    
+                    <li><a href="#" onclick="meow()">
+                        <p>Meowese</p>
+                        <span>Bạn chắc<br>chứ meow?</span>
+                    </a></li>
+                </ul>
+            </a></li>
+            <li><a href="#" >
+                <p><b>THẮC MẮC</b></p>
+                <ion-icon name="help-circle-outline"></ion-icon></a></li>
+            <li><a href="#">
+                <p><b>ĐỐI TÁC</b></p>
+                <ion-icon name="business-outline"></ion-icon>
+            </a></li>
+            <li><a href="../Book/book.html" >
+                <p><b>ĐẶT LỊCH</b></p>
+                <ion-icon name="bandage-outline"></ion-icon>
+            </a></li>
+            <li><a href="../List_booked/index.html" >
+                <p><b>XEM LỊCH</b></p>
+                <ion-icon name="list-outline"></ion-icon>
+            </a></li>
+            <li><a href="../signup_signin/index.html" >
+                <p id="sign_or_not1"><b>ĐĂNG NHẬP</b></p>
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </a></li>
+
+            <li id="more">
+                <a>
+                    <ion-icon name="menu-outline"></ion-icon>
+                </a>
+                
+                <div class="side">
+                    <ul>
+                        <li><a href="../Trang chu/index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            <p>Trang chủ</p>
+                        </a></li>
+                        <li><a href="../signup_signin/index.html">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <p id="sign_or_not2">Đăng nhập</p>
+                        </a></li>
+                        <li><a href="../Book/book.html">
+                            <ion-icon name="bandage-outline"></ion-icon>
+                            <p>Đặt Lịch</p>
+                        </a></li>
+                        <li><a href="../List_booked/index.html">
+                            <ion-icon name="list-outline"></ion-icon>
+                            <p>Xem lịch</p>
+                        </a></li>
+                        <li><a href="">
+                            <ion-icon name="cellular-outline"></ion-icon>
+                            <p>Nổi tiếng</p>
+                        </a></li>
+                        <li><a href="">
+                            <ion-icon name="extension-puzzle-outline"></ion-icon>
+                            <p>Dịch vụ</p>
+                        </a></li>
+                        <li><a href="#" target="_blank">
+                            <ion-icon name="business-outline"></ion-icon>
+                            <p>Liên hệ</p>
+                        </a></li>
+                        <li><a href="#" target="_blank">
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                            <p>Thắc mắc</p>
+                        </a></li>
+                        <li><a href="">
+                            <ion-icon name="globe-outline"></ion-icon>
+                            <p>Ngôn ngữ</p>
+                        </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <div class="main">
+        <div class="booked history">
+            <h2>Lịch sử cuộc hẹn:</h2>
+            <div class="list" id="list_history">
+                <span id="span">Lịch sử buổi hẹn trống!</span>
+            </div>
+            <button id="button_booked" onclick="book('list_history')">Cập nhật</button>
+        </div>
+        <div class="booked upcoming">
+            <h2>Các cuộc hẹn sắp tới:</h2>
+            <div class="list" id="list_upcoming">
+                <span>Không có buổi hẹn nào sắp tới!</span>
+            </div>
+            <button onclick="book('list_upcoming')">Đặt lịch</button>
+        </div>
+    </div>
+    <footer>
+        <div class="top">
+            <img class="logo" src="../Images/pnk2.webp" alt="Logo">
+            <div class="website">
+                <h4>Về chúng tôi</h4>
+                <ul>
+                    <li><a href="#">Cách đặt lịch</a></li>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    <li><a href="#">Trợ giúp</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Tính năng mới</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h4>Theo dõi thêm</h4>
+                <ul>
+                    <li><a href="#">Phenikaa</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Tiktok</a></li>
+                    <li><a href="#">Pornhub</a></li>
+                </ul>
+            </div>
+            <div class="other">
+                <h4> Khác</h4>
+                <ul>
+                    <li><a href="#">Chính sách quyền riêng tư</a></li>
+                    <li><a href="#">Điều khoản & Điều kiện</a></li>
+                    <li><a href="#">Quy chế hoạt động</a></li>
+                    <li><a href="#">Liên kết ngân hàng</a></li>
+                    <li><a href="#">Báo cáo </a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <small>Công ty vô vàn trách nhiệm 4 thành viên. Tòa nhà chọc trời, P. Yên Nghĩa, Q. Hà Đông, TP Hà Nội</small>
+            <h4>Copyright &copy; 2024. All rights has not reserved</h4>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ: khám bệnh vô năng</title>
+    <link rel ='stylesheet' href="css.css">
+    <link rel ='stylesheet' href="reset.css">
+</head>
+<body>
+    <div id="fake-header"></div>
+    <header>
+        <script src="js.js"></script>
+        <a href="../Trang chu/index.html" ><img id="logo" src="../Images/pnk1.jpg" alt="logo"></a>
+        <ul class="menu">
+            <li><a href="#">
+                <p><b>VIETNAMESE</b></p>
+                <ion-icon name="globe-outline"></ion-icon>
+                <ul class="language">
+                    <li><a href=".">
+                        <p>Vietnamese</p>
+                    </a></li>
+
+                    <li><a href="#">
+                        <p>English</p>
+                        <span>Không hỗ trợ ngôn ngữ này</span>
+                    </a></li>
+                    
+                    <li><a href="#" onclick="meow()">
+                        <p>Meowese</p>
+                        <span>Bạn chắc<br>chứ meow?</span>
+                    </a></li>
+                </ul>
+            </a></li>
+            <li><a href="#" >
+                <p><b>THẮC MẮC</b></p>
+                <ion-icon name="help-circle-outline"></ion-icon></a></li>
+            <li><a href="#">
+                <p><b>ĐỐI TÁC</b></p>
+                <ion-icon name="business-outline"></ion-icon>
+            </a></li>
+            <li><a href="../Book/book.html" >
+                <p><b>ĐẶT LỊCH</b></p>
+                <ion-icon name="bandage-outline"></ion-icon>
+            </a></li>
+            <li><a href="../List_booked/index.html" >
+                <p><b>XEM LỊCH</b></p>
+                <ion-icon name="list-outline"></ion-icon>
+            </a></li>
+            <li><a href="../signup_signin/index.html" >
+                <p id="sign_or_not1"><b>ĐĂNG NHẬP</b></p>
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </a></li>
+
+            <li id="more">
+                <a>
+                    <ion-icon name="menu-outline"></ion-icon>
+                </a>
+                
+                <div class="side">
+                    <ul>
+                        <li><a href="../Trang chu/index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            <p>Trang chủ</p>
+                        </a></li>
+                        <li><a href="../signup_signin/index.html">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <p id="sign_or_not2">Đăng nhập</p>
+                        </a></li>
+                        <li><a href="../Book/book.html">
+                            <ion-icon name="bandage-outline"></ion-icon>
+                            <p>Đặt Lịch</p>
+                        </a></li>
+                        <li><a href="../List_booked/index.html">
+                            <ion-icon name="list-outline"></ion-icon>
+                            <p>Xem lịch</p>
+                        </a></li>
+                        <li><a href="">
+                            <ion-icon name="cellular-outline"></ion-icon>
+                            <p>Nổi tiếng</p>
+                        </a></li>
+                        <li><a href="">
+                            <ion-icon name="extension-puzzle-outline"></ion-icon>
+                            <p>Dịch vụ</p>
+                        </a></li>
+                        <li><a href="#" target="_blank">
+                            <ion-icon name="business-outline"></ion-icon>
+                            <p>Liên hệ</p>
+                        </a></li>
+                        <li><a href="#" target="_blank">
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                            <p>Thắc mắc</p>
+                        </a></li>
+                        <li><a href="">
+                            <ion-icon name="globe-outline"></ion-icon>
+                            <p>Ngôn ngữ</p>
+                        </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <div class="main">
+        <div class="left">
+            <img id="avatar" src="../Images/20181211_104609_318316_Vinmec.max-1800x1800.jpg" alt="user_img" onclick="setup()">
+            <div id="set_change_avatar">
+                <input type="file" id="image_input" accept="image/*">
+                <button id="change_avatar" onclick="change_avatar()">Thiếp lập avatar mới</button>
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="infor_user">
+                <h3>Thông tin người dùng</h3>
+                <div class="sub _infor_user">
+                    <div class="info-box box1"> 
+                        <label>Tên của bạn:</label>
+                        <input type="text" class="info-input" value="" readonly> 
+                        <button id="edit" class="edit-btn edit" onclick="enableEdit(0)"><b>Chỉnh sửa</b></button>
+                        <button id="unedit" class="edit-btn unedit" onclick="unableEdit(0)"><b>Đã xong</b></button>
+                    </div>
+                    <div class="info-box box2">
+                        <label>Giới tính:</label> 
+                        <select class="info-input" id="info-sex-dropdown"> 
+                            <option selected value="Helicopter">Helicopter</option>
+                            <option hidden value="Nam">Nam</option> 
+                            <option hidden value="Nữ">Nữ</option> 
+                            <option hidden value="Khác">Khác</option>
+                        </select>
+                        <button id="edit" class="edit-btn edit" onclick="enableEdit(1)"><b>Chỉnh sửa</b></button>
+                        <button id="unedit" class="edit-btn unedit" onclick="unableEdit(1)"><b>Đã xong</b></button>
+                    </div>
+                    <div class="info-box box3"> 
+                        <label>Số điện thoại:</label>
+                        <input type="text" class="info-input" value="" readonly> 
+                        <button id="edit" class="edit-btn edit" onclick="enableEdit(2)"><b>Chỉnh sửa</b></button>
+                        <button id="unedit" class="edit-btn unedit" onclick="unableEdit(2)"><b>Đã xong</b></button>
+                    </div>
+                    <div class="info-box box4"> 
+                        <label>Ngày sinh:</label>
+                        <input type="text" class="info-input" value="" readonly> 
+                        <button id="edit" class="edit-btn edit" onclick="enableEdit(3)"><b>Chỉnh sửa</b></button>
+                        <button id="unedit" class="edit-btn unedit" onclick="unableEdit(3)"><b>Đã xong</b></button>
+                    </div>
+                    <div class="info-box box5">
+                        <label>Địa chỉ hiện tại: </label>
+                        <p id="address_user" class="info-input"></p> 
+                        <button id="edit" class="edit-btn edit" onclick="enableEdit(4)"><b>Chỉnh sửa</b></button>
+                        <button id="unedit" class="edit-btn unedit" onclick="unableEdit(4)"><b>Đã xong</b></button>
+                    </div>
+                    <div class="addres_edit">
+                        <div class="addres province">
+                            <label>Tỉnh/Thành:</label>
+                            <select id="province-select" name="province">
+                                <option value="">Chọn tỉnh/thành phố</option>
+                            </select>
+                        </div>
+                        <div class="addres district">
+                            <label>Quận/Huyện:</label>
+                            <select id="district-select" name="district">
+                                <option value="">Chọn quận/huyện</option>
+                            </select>
+                        </div>
+                        <div class="addres ward">
+                            <label>Phường/Xã:</label>
+                            <select id="ward-select" name="ward"> 
+                                <option value="">Chọn phường/xã</option> 
+                            </select>
+                        </div>
+                        <div class="addres detail">
+                            <label>Hẻm/số nhà:</label>
+                            <input type="text" id="detail_address" placeholder="Có thể để trống" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infor_account">
+                <h3>Thông tin tài khoản</h3>
+                <div class="account">
+                    <div class="sub _info_account">
+                        <div class="info-box box6"> 
+                            <label>Tên tài khoản:</label>
+                            <input type="text" id="user_name" class="info-input" value="có cái con cặc" readonly> 
+                            <button id="edit" class="edit-btn edit" onclick="enableEdit(5)"><b>Chỉnh sửa</b></button>
+                            <button id="unedit" class="edit-btn unedit" onclick="unableEdit(5)"><b>Đã xong</b></button>
+                        </div>
+                        <div class="info-box box7"> 
+                            <label>Mật khẩu:</label>
+                            <input type="password" id="user_password" class="info-input" value="oldpass" readonly> 
+                            <button id="edit" class="edit-btn edit" onclick="load()"><b>Chỉnh sửa</b></button>
+                        </div>
+                    </div>
+                    <div class="sub _more">
+                        <div class="info-box box8"> 
+                            <button onclick="nothing()">Nhập mã giới thiệu</button>
+                        </div>
+                        <div class="info-box box9"> 
+                            <button onclick="nothing()">Quên mật khẩu?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="load">
+        <div class="bg">
+            <img src="../Images/password-76.png" alt="">
+            <div class="change_pass">
+                <div class="inputpass">
+                    <label>Nhập lại mật khẩu cũ:</label>
+                    <input id="old_pass" type="password" class="info-input">     
+                </div>
+                <div class="inputpass">
+                    <label>Nhập mật khẩu mới:</label>
+                    <input id="new_pass1" type="password" class="info-input"> 
+                </div>
+                <div class="inputpass">
+                    <label>Nhập lại mật khẩu mới:</label>
+                    <input id="new_pass2" type="password" class="info-input"> 
+                </div>
+                <div class="inputpass">
+                    <button id="unload" onclick="unload()"><b>Hủy</b></button>
+                    <button id="unload" onclick="change()"><b>Xác nhận</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="top">
+            <img class="logo" src="../Images/pnk2.webp" alt="Logo">
+            <div class="website">
+                <h4>Về chúng tôi</h4>
+                <ul>
+                    <li><a href="#">Cách đặt lịch</a></li>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    <li><a href="#">Trợ giúp</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Tính năng mới</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h4>Theo dõi thêm</h4>
+                <ul>
+                    <li><a href="#">Phenikaa</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Tiktok</a></li>
+                    <li><a href="#">Pornhub</a></li>
+                </ul>
+            </div>
+            <div class="other">
+                <h4> Khác</h4>
+                <ul>
+                    <li><a href="#">Chính sách quyền riêng tư</a></li>
+                    <li><a href="#">Điều khoản & Điều kiện</a></li>
+                    <li><a href="#">Quy chế hoạt động</a></li>
+                    <li><a href="#">Liên kết ngân hàng</a></li>
+                    <li><a href="#">Báo cáo </a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <small>Công ty vô vàn trách nhiệm 4 thành viên. Tòa nhà chọc trời, P. Yên Nghĩa, Q. Hà Đông, TP Hà Nội</small>
+            <h4>Copyright &copy; 2024. All rights has not reserved</h4>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    async function fetchProvinces() {
+        const response = await fetch('https://provinces.open-api.vn/api/p');
+        const data = await response.json();
+        return data;
+    }
+
+    async function fetchDistricts(provinceCode) {
+        const response = await fetch(`https://provinces.open-api.vn/api/p/${provinceCode}?depth=2`);
+        const data = await response.json();
+        return data.districts;
+    }
+
+    async function fetchWards(districtCode) {
+        const response = await fetch(`https://provinces.open-api.vn/api/d/${districtCode}?depth=2`);
+        const data = await response.json();
+        return data.wards;
+    }
+
+    async function populateProvinces() {
+        const provinces = await fetchProvinces();
+        const provinceSelect = document.getElementById('province-select');
+        provinces.forEach(province => {
+            const option = document.createElement('option');
+            option.value = province.code;
+            option.textContent = province.name;
+            provinceSelect.appendChild(option);
+        });
+    }
+
+    async function populateDistricts() {
+        const provinceSelect = document.getElementById('province-select');
+        const districtSelect = document.getElementById('district-select');
+        provinceSelect.addEventListener('change', async () => {
+            districtSelect.innerHTML = '<option value="">Chọn quận/huyện</option>';
+            const wardSelect = document.getElementById('ward-select');
+            wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+            const selectedProvince = provinceSelect.value;
+            if (selectedProvince) {
+                const districts = await fetchDistricts(selectedProvince);
+                districts.forEach(district => {
+                    const option = document.createElement('option');
+                    option.value = district.code;
+                    option.textContent = district.name;
+                    districtSelect.appendChild(option);
+                });
+            }
+        });
+    }
+
+    async function populateWards() {
+        const districtSelect = document.getElementById('district-select');
+        const wardSelect = document.getElementById('ward-select');
+        districtSelect.addEventListener('change', async () => {
+            wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+            const selectedDistrict = districtSelect.value;
+            if (selectedDistrict) {
+                const wards = await fetchWards(selectedDistrict);
+                wards.forEach(ward => {
+                    const option = document.createElement('option');
+                    option.value = ward.code;
+                    option.textContent = ward.name;
+                    wardSelect.appendChild(option);
+                });
+            }
+        });
+    }
+    
+    populateProvinces();
+    populateDistricts();
+    populateWards();
+</script>
+</body>
+</html>

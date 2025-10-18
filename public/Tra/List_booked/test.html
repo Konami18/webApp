@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Sử Giao Dịch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .transaction {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .transaction img {
+            max-width: 50px;
+            margin-right: 20px;
+        }
+        .transaction-code {
+            font-weight: bold;
+        }
+        #addButton {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lịch Sử Giao Dịch</h1>
+    <div id="transactionList">
+        <!-- Box hiển thị giao dịch sẽ được thêm vào đây -->
+    </div>
+    <button id="addButton">Thêm lịch sử giao dịch</button>
+
+    <script>
+        const transactionList = document.getElementById('transactionList');
+        const addButton = document.getElementById('addButton');
+
+        addButton.addEventListener('click', () => {
+            const transactionCode = generateTransactionCode();
+            const transactionBox = document.createElement('div');
+            transactionBox.classList.add('transaction');
+            transactionBox.innerHTML = `
+                <img src="./image/png" alt="Transaction Image">
+                <div class="transaction-code">Mã giao dịch: ${transactionCode}</div>
+            `;
+            transactionList.appendChild(transactionBox);
+        });
+
+        function generateTransactionCode() {
+            return 'TX-' + Math.floor(Math.random() * 1000000);
+        }
+    </script>
+</body>
+</html>

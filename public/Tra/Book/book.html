@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ: khám bệnh vô năng</title>
+    <link rel ='stylesheet' href="book.css">
+    <link rel ='stylesheet' href="reset.css">
+</head>
+<body>
+    <div id="fake-header"></div>
+    <header>
+        <script src="book.js"></script>
+        <a href="../Trang chu/index.html" ><img id="logo" src="../Images/pnk1.jpg" alt="logo"></a>
+        <ul class="menu">
+            <li><a href="#">
+                <p><b>VIETNAMESE</b></p>
+                <ion-icon name="globe-outline"></ion-icon>
+                <ul class="language">
+                    <li><a href=".">
+                        <p>Vietnamese</p>
+                    </a></li>
+
+                    <li><a href="#">
+                        <p>English</p>
+                        <span>Không hỗ trợ ngôn ngữ này</span>
+                    </a></li>
+                    
+                    <li><a href="#" onclick="meow()">
+                        <p>Meowese</p>
+                        <span>Bạn chắc<br>chứ meow?</span>
+                    </a></li>
+                </ul>
+            </a></li>
+            <li><a href="#" >
+                <p><b>THẮC MẮC</b></p>
+                <ion-icon name="help-circle-outline"></ion-icon></a></li>
+            <li><a href="#">
+                <p><b>ĐỐI TÁC</b></p>
+                <ion-icon name="business-outline"></ion-icon>
+            </a></li>
+            <li><a href="../Book/book.html" >
+                <p><b>ĐẶT LỊCH</b></p>
+                <ion-icon name="bandage-outline"></ion-icon>
+            </a></li>
+            <li><a href="../List_booked/index.html" >
+                <p><b>XEM LỊCH</b></p>
+                <ion-icon name="list-outline"></ion-icon>
+            </a></li>
+            <li><a href="../signup_signin/index.html" >
+                <p id="sign_or_not1"><b>ĐĂNG NHẬP</b></p>
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </a></li>
+
+            <li id="more">
+                <a>
+                    <ion-icon name="menu-outline"></ion-icon>
+                </a>
+                
+                <div class="side">
+                    <ul>
+                        <li><a href="../Trang chu/index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            <p>Trang chủ</p>
+                        </a></li>
+                        <li><a href="../signup_signin/index.html">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <p id="sign_or_not2">Đăng nhập</p>
+                        </a></li>
+                        <li><a href="../Book/book.html">
+                            <ion-icon name="bandage-outline"></ion-icon>
+                            <p>Đặt Lịch</p>
+                        </a></li>
+                        <li><a href="../List_booked/index.html">
+                            <ion-icon name="list-outline"></ion-icon>
+                            <p>Xem lịch</p>
+                        </a></li>
+                        <li><a href="">
+                            <ion-icon name="cellular-outline"></ion-icon>
+                            <p>Nổi tiếng</p>
+                        </a></li>
+                        <li><a href="">
+                            <ion-icon name="extension-puzzle-outline"></ion-icon>
+                            <p>Dịch vụ</p>
+                        </a></li>
+                        <li><a href="#" target="_blank">
+                            <ion-icon name="business-outline"></ion-icon>
+                            <p>Liên hệ</p>
+                        </a></li>
+                        <li><a href="#" target="_blank">
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                            <p>Thắc mắc</p>
+                        </a></li>
+                        <li><a href="">
+                            <ion-icon name="globe-outline"></ion-icon>
+                            <p>Ngôn ngữ</p>
+                        </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <div class="main">
+        <div class="top">
+            <div id="t1" class="tron"><h3>Điền thông tin cá nhân</h3></div>
+            <div id="h2" class="line"></div>
+            <div id="t2" class="tron"><h3>Chi tiết lịch khám</h3></div>
+            <div id="h3" class="line"></div>
+            <div id="t3" class="tron"><h3>Dịch vụ đi kèm</h3></div>
+            <div id="h4" class="line"></div>
+            <div id="t4" class="tron"></div>
+        </div>
+        <div class="book b1">
+            <a id="back" href="#" onclick="back()" > <ion-icon name="arrow-undo-outline"></ion-icon> Quay lại</a>
+            <a id="next" href="#" onclick="next()" >Tiếp theo <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            <div class="signed">
+                <img src="../Images/user.png" alt="Ảnh người dùng">
+                <p>Đã đăng nhập tài khoản?<p>
+                <input type="button" id="signed_button" onclick="signed_button()" value="Tự động điền">
+            </div>
+            <div class="main1">
+                <div class="infor i1">
+                    <label>*Họ và tên bệnh nhân:</label><br>
+                    <input type="text" id="i1" > 
+                </div>
+                <div class="infor i2">
+                    <label>*Ngày tháng năm sinh:</label><br>
+                    <input type="date" id="i2"> 
+                </div>
+                <div class="infor i3">
+                    <label>*Số điện thoại:</label><br>
+                    <input type="text" id="i3"> 
+                </div>
+                <div class="infor i4">
+                    <label>*Giới tính:</label><br>
+                    <input type="text" list="sex" id="i4">
+                    <datalist id="sex">
+                        <option value="Nam"></option>
+                        <option value="Nữ"></option>
+                        <option value="Helicopter"></option>
+                        <option value="Khác"></option>
+                    </datalist>
+                </div>
+                <div class="infor i5">
+                    <label>*Tỉnh/Thành:</label><br>
+                    <select id="province-select" name="province">
+                        <option value="">Chọn tỉnh/thành phố</option>
+                    </select>
+                </div>
+                <div class="infor i6">
+                    <label>*Quận/Huyện:</label><br>
+                    <select id="district-select" name="district">
+                        <option value="">Chọn quận/huyện</option>
+                    </select>
+                
+                </div>
+                <div class="infor i7">
+                    <label>*Phường/Xã:</label><br>
+                    <select id="ward-select" name="ward"> 
+                        <option value="">Chọn phường/xã</option> 
+                    </select>
+                </div>
+                <div class="infor i8">
+                    <label>Địa chỉ email:</label><br>
+                    <input type="email" id="i8" placeholder="@gmail.com"> 
+                </div>
+            </div>
+        </div>
+        <div class="book b2">
+            <a id="back" href="#" onclick="back()" > <ion-icon name="arrow-undo-outline"></ion-icon> Quay lại</a>
+            <a id="next" href="#" onclick="next()" >Tiếp theo <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            <div class="main2">
+                <div class="nd">
+                    <h3>*1. Chọn nội dung thăm khám</h3>
+                    <input type="text" id="findnd" placeholder="Chọn chủ đề thăm khám">
+                    <ul  class = "choice">
+                        <li id="f1" onclick="nd(1)">Khám tổng quát</li>
+                        <li onclick="nd(2)">Can thiệp tim mạch</li>
+                        <li onclick="nd(3)">Cơ xương khớp</li>
+                        <li onclick="nd(4)">Da liễu</li>
+                        <li onclick="nd(5)">Đông Y</li>
+                        <li onclick="nd(6)">Gan mật tụy</li>
+                        <li onclick="nd(7)">Hen</li>
+                        <li onclick="nd(8)">Hô hấp</li>
+                        <li onclick="nd(9)">Huyết học</li>
+                        <li onclick="nd(10)">Lão khoa</li>
+                        <li onclick="nd(11)">Lọc máu</li>
+                        <li onclick="nd(12)">Mắt</li>
+                        <li onclick="nd(13)">ngoại chấn thương</li>
+                        <li onclick="nd(14)">Ngoại lồng ngực</li>
+                        <li onclick="nd(15)">Can thiệp mạch máu - u gan</li>
+                    </ul>
+                </div>
+                <div class="cs">
+                    <h3>2. Chọn khu vực gần nhất</h3>
+                    <input type="text" id="finddc" placeholder="Chọn địa chỉ phòng khám">
+                    <ul  class = "choice c2">
+                        <li id="f2" onclick="dc(1)">Hà Nội</li>
+                        <li onclick="dc(2)">Hồ Chí Minh</li>
+                        <li onclick="dc(3)">Đà Nẵng</li>
+                        <li onclick="dc(4)">Cần Thơ</li>
+                        <li onclick="dc(5)">Hải Phòng</li>
+                    </ul>
+                    <h3>3. Chọn cơ sở phòng khám</h3>
+                    <input type="text" id="findcs" placeholder="Chọn cơ sở phòng khám">
+                    <ul  class = "choice c3">
+                        <li id="f3" onclick="cs(1)">Bệnh viện nhân dân Gia Định</li>
+                        <li onclick="cs(2)">Bệnh viện đa khoa Singapore</li>
+                        <li onclick="cs(3)">Bệnh viện y học dược TP.HCM</li>
+                        <li onclick="cs(4)">Bệnh viện Chợ Rẫy</li>
+                        <li onclick="cs(5)">Bệnh viện quận Bình Thạnh</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="book b3">
+            <a id="back" href="#" onclick="back()" > <ion-icon name="arrow-undo-outline"></ion-icon> Quay lại</a>
+            <a id="next" href="#" onclick="next()" >Tiếp theo <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            <div class="main3">
+                <div class="bs">
+                    <h3>4. Đặt riêng chuyên gia</h3>
+                    <input type="text" id="findbs" placeholder="Chọn bác sĩ chuyên gia mà bạn muốn khám riêng">
+                    <ul  class = "choice">
+                        <li id="f4" onclick="bs(1)">Bất kì chuyên gia</li>
+                        <li onclick="bs(2)">Chỉ các chuyên gia là nữ</li>
+                        <li onclick="bs(3)">Chỉ các chuyên gia là nam</li>
+                        <li onclick="bs(4)">Tiến sĩ Dương Văn Trà</li>
+                        <li onclick="bs(5)">Tiến sĩ Vũ Tuấn Anh</li>
+                        <li onclick="bs(6)">Tiến sĩ Đào Lan Anh</li>
+                        <li onclick="bs(7)">Tiến sĩ Võ Văn Quý</li>
+                        <li onclick="bs(8)">Tiến sĩ Mèo</li>
+                    </ul>
+                </div>
+                <div class="aside">
+                    <div class="doctor">
+                        <div id="imgbs">
+                            <img id="img" src="../Images/doctor.png" alt="Hình ảnh bác sĩ"></imgsrc>
+                        </div> 
+                        <div class="inforbs">
+                            <h3>Chuyên gia:</h3><h3 id="name">Bất kì</h3>
+                            <span>Giới tính:</span><span id="gender">Bất kì</span><br><br>
+                            <span>Học hàm/học vị:</span><span id="learn">Bất kì</span><br><br>
+                            <span>Lịch khám:</span><span id="dates">Bất kì ngày trong tuần</span><br><br>
+                        </div>
+                    </div>
+                    <div class="date">
+                        <h3>5. Chọn ngày thăm khám:</h3>
+                        <div class="dates">                            
+                            <div class="label"><input type="checkbox" check><p>Thứ hai</p></div>
+                            <div class="label"><input type="checkbox" check><p>Thứ ba</p></div>
+                            <div class="label"><input type="checkbox" check><p>Thứ tư</p></div>
+                            <div class="label"><input type="checkbox" check><p>Thứ năm</p></div>
+                            <div class="label"><input type="checkbox" check><p>Thứ sáu</p></div>
+                            <div class="label"><input type="checkbox" check><p>Thứ bảy</p></div>
+                            <div class="label"><input type="checkbox" check><p>Chủ nhật</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="load">
+        <div class="bg">
+            <div class="alert">
+                <div class="loading"></div>
+                <h2> Mạng nhà bạn quá yếu<br>Đừng lại sau!</h2>
+                <input type="button" value="Khó chịu!" onclick="unload()">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="top">
+            <img class="logo" src="../Images/pnk2.webp" alt="Logo">
+            <div class="website">
+                <h4>Về chúng tôi</h4>
+                <ul>
+                    <li><a href="#">Cách đặt lịch</a></li>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    <li><a href="#">Trợ giúp</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Tính năng mới</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h4>Theo dõi thêm</h4>
+                <ul>
+                    <li><a href="#">Phenikaa</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Tiktok</a></li>
+                    <li><a href="#">Pornhub</a></li>
+                </ul>
+            </div>
+            <div class="other">
+                <h4> Khác</h4>
+                <ul>
+                    <li><a href="#">Chính sách quyền riêng tư</a></li>
+                    <li><a href="#">Điều khoản & Điều kiện</a></li>
+                    <li><a href="#">Quy chế hoạt động</a></li>
+                    <li><a href="#">Liên kết ngân hàng</a></li>
+                    <li><a href="#">Báo cáo </a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <small>Công ty vô vàn trách nhiệm 4 thành viên. Tòa nhà chọc trời, P. Yên Nghĩa, Q. Hà Đông, TP Hà Nội</small>
+            <h4>Copyright &copy; 2024. All rights has not reserved</h4>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    async function fetchProvinces() {
+        const response = await fetch('https://provinces.open-api.vn/api/p');
+        const data = await response.json();
+        return data;
+    }
+
+    async function fetchDistricts(provinceCode) {
+        const response = await fetch(`https://provinces.open-api.vn/api/p/${provinceCode}?depth=2`);
+        const data = await response.json();
+        return data.districts;
+    }
+
+    async function fetchWards(districtCode) {
+        const response = await fetch(`https://provinces.open-api.vn/api/d/${districtCode}?depth=2`);
+        const data = await response.json();
+        return data.wards;
+    }
+
+    async function populateProvinces() {
+        const provinces = await fetchProvinces();
+        const provinceSelect = document.getElementById('province-select');
+        provinces.forEach(province => {
+            const option = document.createElement('option');
+            option.value = province.code;
+            option.textContent = province.name;
+            provinceSelect.appendChild(option);
+        });
+    }
+
+    async function populateDistricts() {
+        const provinceSelect = document.getElementById('province-select');
+        const districtSelect = document.getElementById('district-select');
+        provinceSelect.addEventListener('change', async () => {
+            districtSelect.innerHTML = '<option value="">Chọn quận/huyện</option>';
+            const wardSelect = document.getElementById('ward-select');
+            wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+            const selectedProvince = provinceSelect.value;
+            if (selectedProvince) {
+                const districts = await fetchDistricts(selectedProvince);
+                districts.forEach(district => {
+                    const option = document.createElement('option');
+                    option.value = district.code;
+                    option.textContent = district.name;
+                    districtSelect.appendChild(option);
+                });
+            }
+        });
+    }
+
+    async function populateWards() {
+        const districtSelect = document.getElementById('district-select');
+        const wardSelect = document.getElementById('ward-select');
+        districtSelect.addEventListener('change', async () => {
+            wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+            const selectedDistrict = districtSelect.value;
+            if (selectedDistrict) {
+                const wards = await fetchWards(selectedDistrict);
+                wards.forEach(ward => {
+                    const option = document.createElement('option');
+                    option.value = ward.code;
+                    option.textContent = ward.name;
+                    wardSelect.appendChild(option);
+                });
+            }
+        });
+    }
+
+    populateProvinces();
+    populateDistricts();
+    populateWards();
+</script>
+</body>
+</html>

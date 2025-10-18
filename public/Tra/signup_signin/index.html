@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign in / Sign up Form</title>
+  </head>
+  <body>
+    <div id="fake-header"></div>
+    <header>
+        <script src="js.js"></script>
+        <a href="../Trang chu/index.html"><img id="logo" src="../Images/pnk1.jpg" alt="logo"></a>
+        <ul class="menu">
+            <li><a href="#">
+                <p><b>VIETNAMESE</b></p>
+                <ion-icon name="globe-outline"></ion-icon>
+                <ul class="language">
+                    <li><a href=".">
+                        <p>Vietnamese</p>
+                    </a></li>
+
+                    <li><a href="#">
+                        <p>English</p>
+                        <span>Không hỗ trợ ngôn ngữ này</span>
+                    </a></li>
+                    
+                    <li><a href="#" onclick="meow()">
+                        <p>Meowese</p>
+                        <span>Bạn chắc<br>chứ meow?</span>
+                    </a></li>
+                </ul>
+            </a></li>
+            <li><a href="#" >
+              <p><b>THẮC MẮC</b></p>
+              <ion-icon name="help-circle-outline"></ion-icon></a></li>
+          <li><a href="#">
+              <p><b>ĐỐI TÁC</b></p>
+              <ion-icon name="business-outline"></ion-icon>
+          </a></li>
+          <li><a href="../Book/book.html" >
+              <p><b>ĐẶT LỊCH</b></p>
+              <ion-icon name="bandage-outline"></ion-icon>
+          </a></li>
+          <li><a href="../List_booked/index.html" >
+              <p><b>XEM LỊCH</b></p>
+              <ion-icon name="list-outline"></ion-icon>
+          </a></li>
+          <li><a href="../signup_signin/index.html" >
+              <p id="sign_or_not1"><b>ĐĂNG NHẬP</b></p>
+              <ion-icon name="person-circle-outline"></ion-icon>
+          </a></li>
+
+          <li id="more">
+              <a>
+                  <ion-icon name="menu-outline"></ion-icon>
+              </a>
+              
+              <div class="side">
+                  <ul>
+                      <li><a href="../Trang chu/index.html">
+                          <ion-icon name="home-outline"></ion-icon>
+                          <p>Trang chủ</p>
+                      </a></li>
+                      <li><a href="../signup_signin/index.html">
+                          <ion-icon name="person-circle-outline"></ion-icon>
+                          <p id="sign_or_not2">Đăng nhập</p>
+                      </a></li>
+                      <li><a href="../Book/book.html">
+                          <ion-icon name="bandage-outline"></ion-icon>
+                          <p>Đặt Lịch</p>
+                      </a></li>
+                      <li><a href="../List_booked/index.html">
+                          <ion-icon name="list-outline"></ion-icon>
+                          <p>Xem lịch</p>
+                      </a></li>
+                      <li><a href="">
+                          <ion-icon name="cellular-outline"></ion-icon>
+                          <p>Nổi tiếng</p>
+                      </a></li>
+                      <li><a href="">
+                          <ion-icon name="extension-puzzle-outline"></ion-icon>
+                          <p>Dịch vụ</p>
+                      </a></li>
+                      <li><a href="#" target="_blank">
+                          <ion-icon name="business-outline"></ion-icon>
+                          <p>Liên hệ</p>
+                      </a></li>
+                      <li><a href="#" target="_blank">
+                          <ion-icon name="help-circle-outline"></ion-icon>
+                          <p>Thắc mắc</p>
+                      </a></li>
+                      <li><a href="">
+                          <ion-icon name="globe-outline"></ion-icon>
+                          <p>Ngôn ngữ</p>
+                      </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+  <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Đăng nhập</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="myname" placeholder="Tên tài khoản" value="" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="mypw" placeholder="Mật khẩu" value=""/>
+            </div>
+            
+            <input type="submit" value="Login" class="btn solid" onclick="load()" />
+            <p class="social-text">Hoặc đăng nhập bằng:</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-google"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-tiktok"></ion-icon>
+              </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Đăng ký</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="user_name" placeholder="Tên tài khoản" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="user_email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="user_password" placeholder="Mật khẩu" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text"> Hoặc đăng nhập bằng :</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-google"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-tiktok"></ion-icon>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Chưa có tài khoản ?</h3>
+            <p>
+              Đăng kí ngay để có thể mở khóa toàn bộ chức năng!
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Đăng ký
+            </button>
+          </div>
+          <img src="login.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Đã có tài khoản?</h3>
+            <p>
+              Đăng nhập ngay để nhận thông báo và sử dụng toàn bộ chức năng!
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Đăng nhập
+            </button>
+          </div>
+          <img src="reg.svg" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="load">
+      <div class="bg">
+          <div class="alert">
+              <div class="loading"></div>
+              <h2> Mạng nhà bạn quá yếu<br>Thử lại sau!</h2>
+              <input type="button" value="Hết hứng" onclick="unload()">
+          </div>
+      </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="app.js"></script>
+  </body>
+</html>
